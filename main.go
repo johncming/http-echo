@@ -15,6 +15,7 @@ func main() {
 		fmt.Fprintf(w, fmt.Sprintf("%s", *text))
 	})
 
+	log.Printf("listening at %s\n", *addr)
 	err := http.ListenAndServe(*addr, nil)
 	if err != nil {
 		log.Fatal(err)
